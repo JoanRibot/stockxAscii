@@ -8,12 +8,6 @@ public class Bid implements Offer {
         this.size=size;
         this.bid=bid;
     }
-
-    
-    @Override
-    public String toString() {
-        return "bid=" + this.bid + ", size=" + this.size;
-    }
     
     @Override
     public String size() {
@@ -24,6 +18,10 @@ public class Bid implements Offer {
     public int value() {
         return this.bid;
     }
-
+    
+    @Override
+    public String toString() {
+        return "\n\t\t" + size() + "\t\t" + value();
+    }
 }
 

@@ -2,6 +2,7 @@ package strockAscii;
 
 import java.util.List;
 
+import Criteria.AndCriteria;
 import Criteria.Asks;
 import Criteria.Bids;
 import Criteria.Criteria;
@@ -9,6 +10,7 @@ import Criteria.LastSale;
 import Criteria.MaxBid;
 import Criteria.MinAsk;
 import Criteria.Sales;
+import Criteria.Size;
 import Items.Item;
 import Items.Sneaker;
 import Offers.Bid;
@@ -171,34 +173,34 @@ public class Stockx {
          * un AND de los filtros Size y Sales.
          */
 
-        // System.out.println("\n\t\t SALES 9.5 US");
-        // Criteria size = new Size("9.5");
+        System.out.println("\n\t\t SALES 9.5 US");
+        Criteria size = new Size("9.5");
 
-        // sales = new Sales();
-        // Criteria andSizeSales = new AndCriteria(size, sales);
-        // andSizeSales.checkCriteria(sneaker).forEach(System.out::print);
+        sales = new Sales();
+        Criteria andSizeSales = new AndCriteria(size, sales);
+        andSizeSales.checkCriteria(sneaker).forEach(System.out::print);
 
-        // List<Offer> sizeSales = andSizeSales.checkCriteria(sneaker);
-        // sneaker.setSale(sizeSales.isEmpty()? 
-        //                     0 : 
-        //                     sizeSales.get(sizeSales.size() -1).value());
-        // System.out.println("\n\t\t LAST SALE 9.5 US: " + sneaker.getSale());
+        List<Offer> sizeSales = andSizeSales.checkCriteria(sneaker);
+        sneaker.setSale(sizeSales.isEmpty()? 
+                            0 : 
+                            sizeSales.get(sizeSales.size() -1).value());
+        System.out.println("\n\t\t LAST SALE 9.5 US: " + sneaker.getSale());
 
-        // /**
-        //  * Reutiliza el filtro AndCriteria 
-        //  * para filtrar las bids de la talla 9.5
-        //  */   
+        /**
+         * Reutiliza el filtro AndCriteria 
+         * para filtrar las bids de la talla 9.5
+         */   
 
-        // System.out.println("\n\t\t BIDS 9.5 US");
-        // bids = new Bids();
-        // Criteria andSizeBids = new AndCriteria(size, bids);
-        // andSizeBids.checkCriteria(sneaker).forEach(System.out::print);
+        System.out.println("\n\t\t BIDS 9.5 US");
+        bids = new Bids();
+        Criteria andSizeBids = new AndCriteria(size, bids);
+        andSizeBids.checkCriteria(sneaker).forEach(System.out::print);
 
-        // /**
-        //  * Crea un filtro Max(size, bids)
-        //  * que devuelva el maximo de las bids
-        //  * de una talla.
-        //  */
+        /**
+         * Crea un filtro Max(size, bids)
+         * que devuelva el maximo de las bids
+         * de una talla.
+         */
 
         // Criteria sizeMaxBid = new Max(size, bids);
         // List<Offer> sizeBid = sizeMaxBid.checkCriteria(sneaker);

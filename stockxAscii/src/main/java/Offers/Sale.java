@@ -19,7 +19,7 @@ public class Sale implements Offer{
 
     @Override
     public String toString() {
-        return "price=" + this.price + ", size=" + this.size;
+        return "\n\t\t" +  size() + "\t\t" + value();
     }
 }
 

@@ -12,8 +12,8 @@ public class SaleTest {
     public void ConstructorTest(){
         Sale sale1 = new Sale("xxx", 8);
         Sale sale2 = new Sale("1456", 89);
-        assertEquals("price=" + 8 + ", size=" + "xxx", sale1.toString());
-        assertEquals("price=" + 89 + ", size=" + "1456", sale2.toString());
+        assertEquals("\n\t\t" + "xxx" + "\t\t" + 8, sale1.toString());
+        assertEquals("\n\t\t" + "1456" + "\t\t" + 89, sale2.toString());
 
         
     }

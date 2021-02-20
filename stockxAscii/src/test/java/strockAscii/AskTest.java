@@ -11,8 +11,8 @@ public class AskTest {
     public void ConstructorTest(){
         Ask ask1 = new Ask("xxx", 8);
         Ask ask2 = new Ask("1456", 89);
-        assertEquals("ask=" + 8 + ", size=" + "xxx", ask1.toString());
-        assertEquals("ask=" + 89 + ", size=" + "1456", ask2.toString());
+        assertEquals("\n\t\t" + "xxx" + "\t\t" + 8, ask1.toString());
+        assertEquals("\n\t\t" + "1456" + "\t\t" + 89, ask2.toString());
 
         
     }
