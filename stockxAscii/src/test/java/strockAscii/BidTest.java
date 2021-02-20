@@ -11,8 +11,8 @@ public class BidTest {
     public void ConstructorTest(){
         Bid bid1 = new Bid("xxx", 8);
         Bid bid2 = new Bid("1456", 89);
-        assertEquals("bid=" + 8 + ", size=" + "xxx", bid1.toString());
-        assertEquals("bid=" + 89 + ", size=" + "1456", bid2.toString());
+        assertEquals("\n\t\t" + "xxx" + "\t\t" + 8, bid1.toString());
+        assertEquals("\n\t\t" + "1456" + "\t\t" + 89, bid2.toString());
 
         
     }
