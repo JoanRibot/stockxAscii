@@ -25,8 +25,6 @@ public class AsksTest {
         sneaker.add(new Ask("9.4", 1111));
         Criteria asks = new Asks();
         int len = asks.checkCriteria(sneaker).size();
-        assertEquals(4, len);
-
-        
+        assertEquals(4, len);        
     }
 }
